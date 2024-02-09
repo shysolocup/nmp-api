@@ -1,5 +1,5 @@
 const { Soup } = require('stews');
-const { Client } = require('../index.js');
+const Client = require('../index.js');
 
 
 module.exports = (client, shandle) =>
