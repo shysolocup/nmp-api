@@ -15,7 +15,7 @@
         "url": "https://github.com/paishee/nmp-api/blob/main/LICENSE"
     },
     "dependencies": {
-        "https://github.com/paishee/noscord.js": "latest",
+        "noscord.js": "github:paishee/noscord.js",
         "@discordjs/voice": "latest",
         "@napi-rs/canvas": "latest",
         "discord.js": "latest",
