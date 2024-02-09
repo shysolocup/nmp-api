@@ -1,5 +1,4 @@
 // client data
-
 const { Client } = require('noscord.js');
 const client = new Client();
 client.import("channels", "util");
