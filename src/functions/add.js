@@ -36,11 +36,11 @@ Client.newF("add", async function(...args) {
 
 
     if (ret.newBal > ret.oldBal) {
-        Object.defineProperty(ret, "name", { value: "AddBalance" });
+        Object.defineProperty(ret, "name", { value: "AddBalance", writable: true });
         await this.events.add.fire(ret, this);
     }
     else {
-        Object.defineProperty(ret, "name", { value: "RemoveBalance" });
+        Object.defineProperty(ret, "name", { value: "RemoveBalance", writable: true });
         await this.events.remove.fire(ret, this);
     }
 
