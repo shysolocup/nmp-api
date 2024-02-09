@@ -4,7 +4,7 @@ const Client = require('../index.js');
 module.exports = (client, shandle) =>
 Client.newF("award", async function(uid) {
     let data = await this.add( this.winAmount, uid, true );
-    Object.defineProperty(data, "name", { value: "WinningBalance" });
+    Object.defineProperty(data, "name", { value: "WinningBalance", writable: true });
 
     await this.events.win.fire(data, this);
 
