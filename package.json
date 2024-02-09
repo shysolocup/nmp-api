@@ -22,8 +22,7 @@
         "deasync": "latest",
         "pender": "latest",
         "stews": "latest",
-        "aepl": "latest",
-        "github:paishee/noscord.js": "latest"
+        "aepl": "latest"
     },
     "keywords": [
         "discord.js",
