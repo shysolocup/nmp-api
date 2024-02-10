@@ -18,7 +18,10 @@ Client.newF("consoleLb", async function() {
 		return `${place}:  ${(i<9)?" ":""} ${bal}   •   ${toNMP(am)} NMP`;
 	});
 
-    console.log("|====== NMP LEADERBOARD =====|\n");
-	console.log(lb.join("\n"));
-	console.log("\n|=============================|\n\n\n");
+    return [ 
+		"|====== NMP LEADERBOARD =====|\n", 
+		lb.join("\n"), 
+		"\n|=============================|\n\n\n" 
+		
+	].join("\n");
 });
