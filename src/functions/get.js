@@ -4,7 +4,7 @@ import('node-fetch');
 
 
 module.exports = (client, shandle) => 
-Client.newF("get", async function() {
+Client.newF("get", async function(mid) {
     let sid = this.storeId;
     let gid = this.guildId;
 
@@ -16,7 +16,7 @@ Client.newF("get", async function() {
 
     const channel = await shandle(sid, gid);
 
-    const ctx = (await channel.messages.fetch()).first();
+    const ctx = (mid) ? await channel.messages.fetch(mid) : (await channel.messages.fetch()).first();
     if (!ctx) return ret;
 
     let link = ctx.attachments.first().url;
