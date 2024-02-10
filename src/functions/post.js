@@ -16,7 +16,7 @@ Client.newF("post", async function(postData) {
     }
 
     const channel = await shandle(sid, gid);
-    const { id, data } = await this.get(gid);
+    const { id, data } = await this.get();
 
     postData = Soup.from(postData);
     postData = postData.sortBy( postData.values, (a, b) => b - a );
